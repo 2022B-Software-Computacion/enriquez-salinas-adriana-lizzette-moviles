@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hola_mundo">Hola Mundo Landscape</string>
+    <color name="letra">#2B2C40</color>
+    <color name="foreground">#fccad1</color>
+</resources>
