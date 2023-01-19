@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.adrianaenriquez.alesapplication">
+    package="com.example.vaesapplication">
 
     <application
         android:allowBackup="true"
@@ -11,8 +11,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Alesapplication"
+        android:theme="@style/Theme.Vaesapplication"
         tools:targetApi="31">
+        <activity
+            android:name=".CIntentExplicitoParametros"
+            android:exported="false" />
+        <activity
+            android:name=".BListView"
+            android:exported="false" />
+        <activity
+            android:name=".ACicloVida"
+            android:exported="false"
+            android:label="@string/title_activity_aciclo_vida"
+            android:theme="@style/Theme.Vaesapplication.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
