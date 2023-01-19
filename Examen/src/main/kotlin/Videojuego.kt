@@ -4,7 +4,6 @@ class Videojuego (
     var rating : String,
     var casaDesarrolladora : String,
     var precio: Double,
-    var genero: Genero
 
 ){
     override fun toString(): String {
