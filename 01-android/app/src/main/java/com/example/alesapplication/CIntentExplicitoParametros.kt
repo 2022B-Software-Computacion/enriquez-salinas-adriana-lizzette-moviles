@@ -1,4 +1,4 @@
-package com.example.vaesapplication
+package com.example.alesapplication
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
