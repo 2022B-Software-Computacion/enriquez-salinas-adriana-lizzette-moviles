@@ -60,6 +60,39 @@ class OperacionesGenero {
         }
     }
 
+    //operacion read
+    fun leerGenero(pathFile: String): java.util.ArrayList<Genero> {
+        val listGenero = java.util.ArrayList<Genero>()
+        try {
+            var result = ""
+            var line = ""
+            val reader = File(pathFile).bufferedReader()
+            while (reader.readLine().also { line = it } != null) {
+                val tokens = StringTokenizer(line, ",")
+                var data = tokens.nextToken()
+                val nombre = data;
+                data = tokens.nextToken()
+                val camara = data.toBoolean();
+                data = tokens.nextToken()
+                val subgenero = data
+                data = tokens.nextToken()
+                val fps = data.toInt();
+                data = tokens.nextToken()
+                val online = data.toBoolean()
+
+                val newGeneroFromFile = Genero(nombre,camara,subgenero,fps,online)
+                listGenero.add(newGeneroFromFile)
+                result += line
+            }
+            reader.close()
+        } catch (e: java.lang.Exception) {
+
+        }
+        return listGenero
+    }
+
+
+
 
 
 }

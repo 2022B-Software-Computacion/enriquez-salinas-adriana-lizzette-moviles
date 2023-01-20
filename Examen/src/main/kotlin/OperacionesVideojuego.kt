@@ -51,7 +51,146 @@ class OperacionesVideojuego {
         }
     }
 
+    //operacion read
+    fun leerVideojuego(pathFile: String): java.util.ArrayList<Videojuego> {
+        val listVideojuego = java.util.ArrayList<Videojuego>()
+        try {
+            var result = ""
+            var line = ""
+            val reader = File(pathFile).bufferedReader()
+            while (reader.readLine().also { line = it } != null) {
+                val tokens = StringTokenizer(line, ",")
+                var data = tokens.nextToken()
+                val nombre = data;
+                data = tokens.nextToken()
+                val anio = data.toInt();
+                data = tokens.nextToken()
+                val rating = data;
+                data = tokens.nextToken()
+                val desarrolladora = data
+                data = tokens.nextToken()
+                val precio = data.toDouble()
 
+                val newVideojuegoFromFile = Videojuego(nombre, anio, rating, desarrolladora,
+                    precio)
+                listVideojuego.add(newVideojuegoFromFile)
+                result += line
+            }
+            reader.close()
+        } catch (e: java.lang.Exception) {
 
+        }
+        return listVideojuego
+    }
+
+    //Actualizar
+    fun actualizarVideojuego(findVideojuego: String, listVideojuego: ArrayList<Videojuego>, pathFile: String):
+            ArrayList<Videojuego>{
+        try {
+            for (videojuegoFind in listVideojuego){
+                if (videojuegoFind.nombreJuego == findVideojuego){
+                    val index = listVideojuego.indexOf(videojuegoFind)
+                    println("*** Información sobre el videojuego  "+"\n")
+                    println("1. Nombre del videojuego: "+videojuegoFind.nombreJuego)
+                    println("2. Año de release: "+videojuegoFind.anioRelease)
+                    println("3. Rating: "+videojuegoFind.rating)
+                    println("4. Casa desarrolladora: "+videojuegoFind.casaDesarrolladora)
+                    println("5. Precio: "+videojuegoFind.precio)
+                    println("Seleccione la información deseas cambiar: ")
+                    when (readLine()!!.toInt()){
+                        1 -> {
+                            println("Ingrese la nueva información de nombre:")
+                            val newName = readLine()
+                            videojuegoFind.nombreJuego = newName.toString()
+                            listVideojuego[index] = videojuegoFind
+                            writeUpdateData(listVideojuego, pathFile)
+                            println("El nombre del videojuego se ha actualizado con éxito")
+                            break
+                        }
+                        2 -> {
+                            println("Ingrese la nueva información de año de release:")
+                            val newId = readLine()!!.toInt()
+                            videojuegoFind.anioRelease = newId
+                            listVideojuego.set(index,videojuegoFind)
+                            writeUpdateData(listVideojuego, pathFile)
+                            println("El año de release se ha actualizado con éxito")
+                            break
+                        }
+                        3 -> {
+                            println("Ingrese la nueva información del Rating del videojuego:")
+                            val ratingVideojuego = readLine()
+                            videojuegoFind.rating = ratingVideojuego.toString()
+                            listVideojuego.set(index,videojuegoFind)
+                            writeUpdateData(listVideojuego, pathFile)
+                            println("El rating del videojuego se ha actualizado con exito")
+                            break
+                        }
+                        4 -> {
+                            println("Ingrese la nueva información de la empresa de desarrollo")
+                            val casaVideojuego = readLine()
+                            videojuegoFind.casaDesarrolladora = casaVideojuego.toString()
+                            listVideojuego.set(index,videojuegoFind)
+                            writeUpdateData(listVideojuego, pathFile)
+                            println("La empresa de desarrollo se ha actualizado con éxito")
+                            break
+                        }
+                        5 -> {
+                            println("Ingrese la nueva información sobre el precio del videojuego:")
+                            val newPrecio = readLine()!!.toDouble()
+                            videojuegoFind.precio = newPrecio
+                            listVideojuego.set(index,videojuegoFind)
+                            writeUpdateData(listVideojuego, pathFile)
+                            println("El precio del videojuego se ha actualizado con exito!")
+                            break
+                        }
+                        else -> {
+                            println("La operación de actualización escogida no existe")
+                            break
+                        }
+                    }
+                }else{
+                    println("El videojuego ingresado no existe.")
+                }
+            }
+        }catch (e:Exception){
+            println("Error Update $e")
+        }
+        return listVideojuego
+    }
+
+    fun writeUpdateData(listVideojuego: ArrayList<Videojuego>, pathFile: String) {
+        try {
+            var file: File? = null
+            var fw: FileWriter? = null
+            var pw: PrintWriter? = null
+            var text = ""
+            for (videojuego in listVideojuego){
+                try {
+                    file = File(pathFile)
+                    fw = FileWriter(file)//true
+                    pw = PrintWriter(fw)
+                    text = text + videojuego.nombreJuego + ",";
+                    text = text + videojuego.anioRelease + ",";
+                    text = text + videojuego.rating + ",";
+                    text = text + videojuego.casaDesarrolladora+ ",";
+                    text = text + videojuego.precio+"\n";
+                    fw.write(text);
+                    fw.write("\n");
+                }catch (e: Exception){
+                    println("Error Write Update Videojuego $e")
+                }finally {
+                    try {
+                        if(fw !=null){
+                            fw.close()
+                        }
+                    }catch (e: Exception){
+                        println("Error Write Update Videojuego $e")
+                    }
+                }
+            }
+        }catch (e: Exception){
+            println("Error Update $e")
+        }
+    }
 
 }
