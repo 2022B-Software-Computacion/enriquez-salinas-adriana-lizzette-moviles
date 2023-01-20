@@ -201,6 +201,26 @@ class OperacionesGenero {
         }
     }
 
+    //Eliminar
+    //Delete Dish
+    fun eliminarVideojuego(findVideojuego: String, listGenero: ArrayList<Genero>, pathFile: String):
+            ArrayList<Genero>{
+        try {
+            for(encontrarGenero in listGenero){
+                if(encontrarGenero.nombreGenero == findVideojuego){
+                    listGenero.remove(encontrarGenero)
+                    writeUpdateData(listGenero, pathFile)
 
+                    println("Genero eliminado con exito")
+                    break
+                }else{
+                    println("El genero ingresado no existe, intente con otro")
+                }
+            }
+        }catch (e: Exception){
+            println("Error Delete $e")
+        }
+        return listGenero
+    }
 
 }

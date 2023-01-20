@@ -193,4 +193,27 @@ class OperacionesVideojuego {
         }
     }
 
+    //Eliminar
+    //Delete Dish
+    fun eliminarVideojuego(findVideojuego: String, listVideojuego: ArrayList<Videojuego>, pathFile: String):
+            ArrayList<Videojuego>{
+        try {
+            for(encontrarVideojuego in listVideojuego){
+                if(encontrarVideojuego.nombreJuego == findVideojuego){
+                    listVideojuego.remove(encontrarVideojuego)
+                    writeUpdateData(listVideojuego, pathFile)
+
+                    println("Videojuego eliminado con exito")
+                    break
+                }else{
+                    println("El videojuego ingresado no existe, intente con otro")
+                }
+            }
+        }catch (e: Exception){
+            println("Error Delete $e")
+        }
+        return listVideojuego
+    }
+
+
 }
