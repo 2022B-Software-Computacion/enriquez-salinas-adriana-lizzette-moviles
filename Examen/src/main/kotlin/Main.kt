@@ -104,7 +104,7 @@ fun main() {
                                     }
                                 }
                             }catch (e: Exception){
-                                println(" Error Módulo Dishes !! $e")
+                                println(" Error Módulo Generos !! $e")
                             }
                         }
                     }
@@ -114,10 +114,10 @@ fun main() {
                     val auxLeerVideojuego = listVideojuegos.leerVideojuego(pathVideojuegoFile)
                     println(auxLeerVideojuego)
                     println()
-                    println("Ingresé el nombre del Restaurante que desea eliminar: ")
+                    println("Ingresé el nombre del Genero que desea eliminar: ")
                     val videojuegoDel = readLine()!!
                     val auxI = listVideojuegos.eliminarVideojuego(videojuegoDel,auxLeerVideojuego,pathVideojuegoFile)
-                    println("Los Restaurantes registrados son: ")
+                    println("Los generos registrados son: ")
                     println(auxI)
                 }
                 5 -> {
