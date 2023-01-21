@@ -23,7 +23,7 @@ class OperacionesVideojuego {
     //Escribir videojuego a partir de archivo
     fun escribirVideojuego(pathFile: String, videojuego: Videojuego, listVideojuego: ArrayList<Videojuego>){
         listVideojuego.add(videojuego)
-        var file: File? = null
+        val file: File?
         var fw: FileWriter? = null
         var pw: PrintWriter? = null
         var text = ""
@@ -54,7 +54,7 @@ class OperacionesVideojuego {
         val listVideojuego = java.util.ArrayList<Videojuego>()
         try {
             var result = ""
-            var line = ""
+            var line: String
             val reader = File(pathFile).bufferedReader()
             while (reader.readLine().also { line = it } != null) {
                 val tokens = StringTokenizer(line, ",")
@@ -158,7 +158,7 @@ class OperacionesVideojuego {
 
     fun writeUpdateData(listVideojuego: ArrayList<Videojuego>, pathFile: String) {
         try {
-            var file: File? = null
+            var file: File?
             var fw: FileWriter? = null
             var pw: PrintWriter? = null
             var text = ""

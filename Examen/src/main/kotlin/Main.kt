@@ -1,4 +1,4 @@
-fun main(args: Array<String>) {
+fun main() {
 
     val pathVideojuegoFile = "videojuegos.txt"
     var pathGenerosFile: String
@@ -60,7 +60,7 @@ fun main(args: Array<String>) {
                                     when(readLine()!!.toInt()){
                                         1 -> {
                                             val nuevoGenero = listGenerosClass.creacionGenero()
-                                            var aux = listGenerosClass.leerGenero( pathGenerosFile)
+                                            val aux = listGenerosClass.leerGenero( pathGenerosFile)
                                             listGenerosClass.escribirGenero(pathGenerosFile, nuevoGenero, aux)
                                             println()
                                         }

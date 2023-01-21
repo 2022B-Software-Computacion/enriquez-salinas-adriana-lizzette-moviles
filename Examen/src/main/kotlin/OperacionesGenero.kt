@@ -7,7 +7,7 @@ class OperacionesGenero {
         val nombre = readLine()!!
         println("Si el genero tiene camara libre escriba 1 sino 0")
         val camara = readLine()!!.toInt()
-        var cambool = true
+        val cambool: Boolean
         if (camara ==1){
             cambool = true
         }else{
@@ -19,7 +19,7 @@ class OperacionesGenero {
         val fps = readLine()!!.toInt()
         println("Si el genero es online escriba 1 sino 0")
         val online = readLine()!!.toInt()
-        var onlbool = true
+        val onlbool: Boolean
         if (online ==1){
             onlbool = true
         }else{
@@ -32,7 +32,7 @@ class OperacionesGenero {
     //Escribir genero a partir de archivo
     fun escribirGenero(pathFile: String, genero: Genero, listVideojuego: ArrayList<Genero>){
         listVideojuego.add(genero);
-        var file: File? = null
+        var file: File?
         var fw: FileWriter? = null
         var pw: PrintWriter? = null
         var text = ""
@@ -65,7 +65,7 @@ class OperacionesGenero {
         val listGenero = java.util.ArrayList<Genero>()
         try {
             var result = ""
-            var line = ""
+            var line: String
             val reader = File(pathFile).bufferedReader()
             while (reader.readLine().also { line = it } != null) {
                 val tokens = StringTokenizer(line, ",")
