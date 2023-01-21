@@ -127,6 +127,6 @@ fun main() {
             }
         }
     }catch (e: Exception){
-        println("Error Menu $e")
+        println("Error $e")
     }
 }
