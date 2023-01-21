@@ -1,1 +1,4 @@
 Metal Gear Solid,1998,Mature,Konami,30.0
+Metal Gear Solid,1998,Mature,Konami,30.0
+Cooking Mama,2000,Everyone,Bandai,30.0
+
