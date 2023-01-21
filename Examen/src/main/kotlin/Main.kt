@@ -71,14 +71,14 @@ fun main() {
                                         }
                                         3 -> {
                                             println("Los generos registrados son: ")
-                                            val auxReadDishes = listGenerosClass.leerGenero(pathGenerosFile)
-                                            println(auxReadDishes)
+                                            val auxReadGenero = listGenerosClass.leerGenero(pathGenerosFile)
+                                            println(auxReadGenero)
                                             println()
                                             println("Ingresé el nombre del genero a actualizar: ")
-                                            val dishUpdate = readLine()!!
+                                            val generoUpdate = readLine()!!
                                             println()
                                             println("Actualizar información del genero")
-                                            listGenerosClass.actualizarGenero(dishUpdate, auxReadDishes, pathGenerosFile)
+                                            listGenerosClass.actualizarGenero(generoUpdate, auxReadGenero, pathGenerosFile)
                                         }
                                         4 -> {
                                             println("Los generos registrados son: ")

@@ -192,7 +192,6 @@ class OperacionesVideojuego {
     }
 
     //Eliminar
-    //Delete Dish
     fun eliminarVideojuego(findVideojuego: String, listVideojuego: ArrayList<Videojuego>, pathFile: String):
             ArrayList<Videojuego>{
         try {

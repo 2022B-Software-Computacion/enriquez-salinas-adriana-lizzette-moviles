@@ -1,0 +1,1 @@
+Acción,true,Shooters,15,false

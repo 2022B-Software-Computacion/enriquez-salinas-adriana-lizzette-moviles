@@ -202,7 +202,6 @@ class OperacionesGenero {
     }
 
     //Eliminar
-    //Delete Dish
     fun eliminarGenero(findVideojuego: String, listGenero: ArrayList<Genero>, pathFile: String):
             ArrayList<Genero>{
         try {
