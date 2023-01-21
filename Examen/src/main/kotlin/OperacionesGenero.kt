@@ -30,8 +30,8 @@ class OperacionesGenero {
 
     }
     //Escribir genero a partir de archivo
-    fun escribirVideojuego(pathFile: String, videojuego: Videojuego, listVideojuego: ArrayList<Videojuego>){
-        listVideojuego.add(videojuego);
+    fun escribirGenero(pathFile: String, genero: Genero, listVideojuego: ArrayList<Genero>){
+        listVideojuego.add(genero);
         var file: File? = null
         var fw: FileWriter? = null
         var pw: PrintWriter? = null
@@ -40,12 +40,12 @@ class OperacionesGenero {
             file = File(pathFile)
             fw = FileWriter(file, true)//true
             pw = PrintWriter(fw)
-            text = text + videojuego.nombreJuego + ",";
-            text = text + videojuego.anioRelease + ",";
-            text = text + videojuego.rating + ",";
-            text = text + videojuego.casaDesarrolladora + ",";
-            text  = text + videojuego.precio + "\n";
-            fw.write(text);
+            text = text + genero.nombreGenero + ","
+            text = text + genero.camaraLibre + ","
+            text = text + genero.subgenero + ","
+            text = text + genero.fps + ","
+            text  = text + genero.online + "\n"
+            fw.write(text)
             println("El Videojuego ha sido creado de forma satisfactoria")
         }catch (e: Exception){
             println("Error en escribir videojuego $e")
@@ -70,13 +70,13 @@ class OperacionesGenero {
             while (reader.readLine().also { line = it } != null) {
                 val tokens = StringTokenizer(line, ",")
                 var data = tokens.nextToken()
-                val nombre = data;
+                val nombre = data
                 data = tokens.nextToken()
-                val camara = data.toBoolean();
+                val camara = data.toBoolean()
                 data = tokens.nextToken()
                 val subgenero = data
                 data = tokens.nextToken()
-                val fps = data.toInt();
+                val fps = data.toInt()
                 data = tokens.nextToken()
                 val online = data.toBoolean()
 
@@ -177,13 +177,13 @@ class OperacionesGenero {
                     file = File(pathFile)
                     fw = FileWriter(file)//true
                     pw = PrintWriter(fw)
-                    text = text + genero.nombreGenero + ",";
-                    text = text + genero.camaraLibre + ",";
-                    text = text + genero.subgenero+ ",";
-                    text = text + genero.fps+ ",";
-                    text = text + genero.online+"\n";
+                    text = text + genero.nombreGenero + ","
+                    text = text + genero.camaraLibre + ","
+                    text = text + genero.subgenero+ ","
+                    text = text + genero.fps+ ","
+                    text = text + genero.online+"\n"
                     fw.write(text);
-                    fw.write("\n");
+                    fw.write("\n")
                 }catch (e: Exception){
                     println("Error Write Update Genero $e")
                 }finally {
@@ -203,7 +203,7 @@ class OperacionesGenero {
 
     //Eliminar
     //Delete Dish
-    fun eliminarVideojuego(findVideojuego: String, listGenero: ArrayList<Genero>, pathFile: String):
+    fun eliminarGenero(findVideojuego: String, listGenero: ArrayList<Genero>, pathFile: String):
             ArrayList<Genero>{
         try {
             for(encontrarGenero in listGenero){

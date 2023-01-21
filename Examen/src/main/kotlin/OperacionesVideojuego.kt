@@ -22,7 +22,7 @@ class OperacionesVideojuego {
 
     //Escribir videojuego a partir de archivo
     fun escribirVideojuego(pathFile: String, videojuego: Videojuego, listVideojuego: ArrayList<Videojuego>){
-        listVideojuego.add(videojuego);
+        listVideojuego.add(videojuego)
         var file: File? = null
         var fw: FileWriter? = null
         var pw: PrintWriter? = null
@@ -31,20 +31,18 @@ class OperacionesVideojuego {
             file = File(pathFile)
             fw = FileWriter(file, true)//true
             pw = PrintWriter(fw)
-            text = text + videojuego.nombreJuego + ",";
-            text = text + videojuego.anioRelease + ",";
-            text = text + videojuego.rating + ",";
-            text = text + videojuego.casaDesarrolladora + ",";
-            text  = text + videojuego.precio + "\n";
-            fw.write(text);
+            text = text + videojuego.nombreJuego + ","
+            text = text + videojuego.anioRelease + ","
+            text = text + videojuego.rating + ","
+            text = text + videojuego.casaDesarrolladora + ","
+            text  = text + videojuego.precio + "\n"
+            fw.write(text)
             println("El Videojuego ha sido creado de forma satisfactoria")
         }catch (e: Exception){
             println("Error en escribir videojuego $e")
         }finally {
             try {
-                if(fw !=null){
-                    fw.close()
-                }
+                fw?.close()
             }catch (e: Exception){
                 println("Error en escribir videojuego $e")
             }
@@ -61,11 +59,11 @@ class OperacionesVideojuego {
             while (reader.readLine().also { line = it } != null) {
                 val tokens = StringTokenizer(line, ",")
                 var data = tokens.nextToken()
-                val nombre = data;
+                val nombre = data
                 data = tokens.nextToken()
-                val anio = data.toInt();
+                val anio = data.toInt()
                 data = tokens.nextToken()
-                val rating = data;
+                val rating = data
                 data = tokens.nextToken()
                 val desarrolladora = data
                 data = tokens.nextToken()
@@ -169,13 +167,13 @@ class OperacionesVideojuego {
                     file = File(pathFile)
                     fw = FileWriter(file)//true
                     pw = PrintWriter(fw)
-                    text = text + videojuego.nombreJuego + ",";
-                    text = text + videojuego.anioRelease + ",";
-                    text = text + videojuego.rating + ",";
-                    text = text + videojuego.casaDesarrolladora+ ",";
-                    text = text + videojuego.precio+"\n";
-                    fw.write(text);
-                    fw.write("\n");
+                    text = text + videojuego.nombreJuego + ","
+                    text = text + videojuego.anioRelease + ","
+                    text = text + videojuego.rating + ","
+                    text = text + videojuego.casaDesarrolladora+ ","
+                    text = text + videojuego.precio+"\n"
+                    fw.write(text)
+                    fw.write("\n")
                 }catch (e: Exception){
                     println("Error Write Update Videojuego $e")
                 }finally {
