@@ -1,38 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.alesapplication">
+xmlns:tools="http://schemas.android.com/tools"
+package="alesapplication">
 
-    <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.alesapplication"
-        tools:targetApi="31">
-        <activity
-            android:name="com.example.alesapplication.CIntentExplicitoParametros"
-            android:exported="false" />
-        <activity
-            android:name="com.example.alesapplication.BListView"
-            android:exported="false" />
-        <activity
-            android:name="com.example.alesapplication.ACicloVida"
-            android:exported="false"
-            android:label="@string/title_activity_aciclo_vida"
-            android:theme="@style/Theme.alesapplication.NoActionBar" />
-        <activity
-            android:name="com.example.alesapplication.MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
+<application
+    android:allowBackup="true"
+    android:dataExtractionRules="@xml/data_extraction_rules"
+    android:fullBackupContent="@xml/backup_rules"
+    android:icon="@mipmap/ic_launcher"
+    android:label="alesapplication"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.Vaesapplication"
+    tools:targetApi="31">
+
+    <activity
+        android:name="com.example.alesapplication.HGoogleMapsActivity"
+        android:exported="false"
+
+        />
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyBl6HOEQc4EvK4cAaujWO6Sd9giK5a2ps8" />
+
+    <activity
+        android:name="com.example.alesapplication.HGoogleMaps"
+        android:exported="false"
+        android:label="@string/title_activity_hgoogle_maps" />
+
+    <activity
+        android:name="com.example.alesapplication.GRecyclerView"
+        android:exported="false" />
+    <activity
+        android:name="com.example.alesapplication.ECrudEntrenador"
+        android:exported="false" />
+    <!--    android:exported="true" Para que seas visible!    -->
+    <activity
+        android:name="com.example.alesapplication.CIntentExplicitoParametros"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.SEND" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:mimeType="text/plain" />
+        </intent-filter>
+    </activity>
+    <activity
+        android:name="com.example.alesapplication.BListView"
+        android:exported="false" />
+    <activity
+        android:name="com.example.alesapplication.ACicloVida"
+        android:exported="false"
+        android:label="@string/title_activity_aciclo_vida"
+        android:theme="@style/Theme.Vaesapplication.NoActionBar" />
+    <activity
+        android:name="com.example.alesapplication.MainActivity"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <activity
+        android:name="com.example.alesapplication.IFirebaseUIAuth"
+        android:exported="false"
+
+        />
+</application>
 
 </manifest>
+

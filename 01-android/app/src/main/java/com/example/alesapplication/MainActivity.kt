@@ -1,5 +1,6 @@
 package com.example.alesapplication
 
+import alesapplication.R
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
@@ -9,6 +10,7 @@ import android.provider.ContactsContract
 import android.util.Log
 import android.widget.Button
 import androidx.activity.result.contract.ActivityResultContracts
+import com.example.vaesapplication.HGoogleMapsActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -55,6 +57,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Base de datos sqlite
+        EBaseDeDatos.tablaEntrenador = ESqliteHelperEntrenador(this)
+
         val botonCicloVida = findViewById<Button>(R.id.btn_ciclo_vida)
         botonCicloVida
             .setOnClickListener {
@@ -82,7 +88,34 @@ class MainActivity : AppCompatActivity() {
             .setOnClickListener {
                 abrirActividadConParametros(CIntentExplicitoParametros::class.java)
             }
+
+        val botonSqlite = findViewById<Button>(R.id.btn_sqlite)
+        botonSqlite
+            .setOnClickListener {
+                irActividad(ECrudEntrenador::class.java)
+            }
+
+        val botonRView = findViewById<Button>(R.id.btn_revcycler_view)
+        botonRView
+            .setOnClickListener {
+                irActividad(GRecyclerView::class.java)
+            }
+
+        val botonMaps = findViewById<Button>(R.id.btn_google_maps)
+        botonRView
+            .setOnClickListener {
+                irActividad(HGoogleMapsActivity::class.java)
+            }
+        val botonFirebaseUi = findViewById<Button>(R.id.btn_intent_firebase_ui)
+        botonRView
+            .setOnClickListener {
+                irActividad(IFirebaseUIAuth::class.java)
+            }
+
     }
+
+
+
 
     fun abrirActividadConParametros(
         clase: Class<*>,
