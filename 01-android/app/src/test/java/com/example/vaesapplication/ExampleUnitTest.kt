@@ -1,4 +1,4 @@
-package com.example.alesapplication
+package com.example.vaesapplication
 
 import org.junit.Test
 

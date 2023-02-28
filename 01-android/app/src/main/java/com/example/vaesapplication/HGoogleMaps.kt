@@ -1,4 +1,4 @@
-package com.example.alesapplication
+package com.example.vaesapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,22 +9,22 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.example.alesapplication.databinding.ActivityHgoogleMapsBinding
+import com.example.vaesapplication.databinding.ActivityHgoogleMapsBinding
 
 class HGoogleMaps : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
-private lateinit var binding: ActivityHgoogleMapsBinding
+    private lateinit var binding: ActivityHgoogleMapsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-     binding = ActivityHgoogleMapsBinding.inflate(layoutInflater)
-     setContentView(binding.root)
+        binding = ActivityHgoogleMapsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
-                .findFragmentById(R.id.map) as SupportMapFragment
+            .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
     }
 

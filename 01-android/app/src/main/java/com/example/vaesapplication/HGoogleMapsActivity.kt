@@ -1,6 +1,5 @@
 package com.example.vaesapplication
 
-import alesapplication.R
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -23,10 +22,10 @@ class HGoogleMapsActivity : AppCompatActivity() {
         solicitarPermisos()
         iniciarLogicaMapa()
         val boton = findViewById<Button>(R.id.btn_ir_carolina)
-        boton.
-        setOnClickListener {
-            irCarolina()
-        }
+                boton.
+                setOnClickListener {
+                    irCarolina()
+                }
     }
 
     fun irCarolina(){

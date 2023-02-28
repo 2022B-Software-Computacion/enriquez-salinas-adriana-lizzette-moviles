@@ -3,14 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/SEXTO-SEPTIMO-SEMESTRE/App-Moviles/enriquez-salinas-adriana-lizzette-moviles/01-android/app/src/main/res/layout/activity_hgoogle_maps2.xml" value="0.264" />
-        <entry key="..\:/SEXTO-SEPTIMO-SEMESTRE/App-Moviles/enriquez-salinas-adriana-lizzette-moviles/01-android/app/src/main/res/layout/activity_ifirebase_uiauth.xml" value="0.264" />
-        <entry key="..\:/SEXTO-SEPTIMO-SEMESTRE/App-Moviles/enriquez-salinas-adriana-lizzette-moviles/01-android/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/adrian.eguez/Documents/Github/2022B/eguez-sarzpsa-vicente-adrian-ms/01-android/app/src/main/res/layout/activity_aciclo_vida.xml" value="0.2" />
         <entry key="..\:/Users/adrian.eguez/Documents/Github/2022B/eguez-sarzpsa-vicente-adrian-ms/01-android/app/src/main/res/layout/activity_blist_view.xml" value="0.25" />
         <entry key="..\:/Users/adrian.eguez/Documents/Github/2022B/eguez-sarzpsa-vicente-adrian-ms/01-android/app/src/main/res/layout/activity_cintent_explicito_parametros.xml" value="0.22" />
         <entry key="..\:/Users/adrian.eguez/Documents/Github/2022B/eguez-sarzpsa-vicente-adrian-ms/01-android/app/src/main/res/layout/activity_ecrud_entrenador.xml" value="0.25" />
         <entry key="..\:/Users/adrian.eguez/Documents/Github/2022B/eguez-sarzpsa-vicente-adrian-ms/01-android/app/src/main/res/layout/activity_grecycler_view.xml" value="0.33" />
+        <entry key="..\:/Users/adrian.eguez/Documents/Github/2022B/eguez-sarzpsa-vicente-adrian-ms/01-android/app/src/main/res/layout/activity_hgoogle_maps.xml" value="0.10380779691749774" />
+        <entry key="..\:/Users/adrian.eguez/Documents/Github/2022B/eguez-sarzpsa-vicente-adrian-ms/01-android/app/src/main/res/layout/activity_hgoogle_maps2.xml" value="0.1" />
+        <entry key="..\:/Users/adrian.eguez/Documents/Github/2022B/eguez-sarzpsa-vicente-adrian-ms/01-android/app/src/main/res/layout/activity_ifirebase_uiauth.xml" value="0.2" />
+        <entry key="..\:/Users/adrian.eguez/Documents/Github/2022B/eguez-sarzpsa-vicente-adrian-ms/01-android/app/src/main/res/layout/activity_jfirebase_firestore.xml" value="0.25" />
         <entry key="..\:/Users/adrian.eguez/Documents/Github/2022B/eguez-sarzpsa-vicente-adrian-ms/01-android/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/adrian.eguez/Documents/Github/2022B/eguez-sarzpsa-vicente-adrian-ms/01-android/app/src/main/res/layout/recycler_view_vista.xml" value="0.33" />
         <entry key="..\:/Users/adrian.eguez/Documents/Github/2022B/eguez-sarzpsa-vicente-adrian-ms/01-android/app/src/main/res/menu/menu.xml" value="0.9029126213592233" />

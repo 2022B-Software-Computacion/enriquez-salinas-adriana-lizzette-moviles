@@ -1,6 +1,5 @@
-package com.example.alesapplication
+package com.example.vaesapplication
 
-import alesapplication.R
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
@@ -10,7 +9,6 @@ import android.provider.ContactsContract
 import android.util.Log
 import android.widget.Button
 import androidx.activity.result.contract.ActivityResultContracts
-import com.example.vaesapplication.HGoogleMapsActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -102,20 +100,23 @@ class MainActivity : AppCompatActivity() {
             }
 
         val botonMaps = findViewById<Button>(R.id.btn_google_maps)
-        botonRView
+        botonMaps
             .setOnClickListener {
                 irActividad(HGoogleMapsActivity::class.java)
             }
-        val botonFirebaseUi = findViewById<Button>(R.id.btn_intent_firebase_ui)
-        botonRView
+
+        val botonFirebaseUI = findViewById<Button>(R.id.btn_intent_firebase_ui)
+        botonFirebaseUI
             .setOnClickListener {
                 irActividad(IFirebaseUIAuth::class.java)
             }
 
+        val botonFirestore = findViewById<Button>(R.id.btn_intent_firestore)
+        botonFirestore
+            .setOnClickListener {
+                irActividad(JFirebaseFirestore::class.java)
+            }
     }
-
-
-
 
     fun abrirActividadConParametros(
         clase: Class<*>,
