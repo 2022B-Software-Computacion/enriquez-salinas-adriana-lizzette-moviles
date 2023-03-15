@@ -14,7 +14,19 @@
         android:theme="@style/Theme.Examen2B"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".EditVideojuegoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditGeneroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VideojuegoListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CrearGeneroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

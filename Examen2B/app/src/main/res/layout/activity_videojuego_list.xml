@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MainActivity">
+    tools:context=".activity.VideojuegoListActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,26 +14,27 @@
         tools:ignore="MissingConstraints">
 
         <TextView
+            android:id="@+id/videojuegosNameTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lista de marcas"
+            android:text="Lista de Videojuegos"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"/>
 
         <Button
-            android:id="@+id/btn_crear_genero"
+            android:id="@+id/nuevoVideojuego"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="#f5aebc"
-            android:text="Agregar un Género"
-            android:textColor="#000000"
+            android:background="#e88eaa"
+            android:text="Agrega un Videojuego"
+            android:textColor="#f0dae1"
             android:textSize="18sp"
+            android:layout_marginTop="16dp"
             tools:ignore="VisualLintButtonSize" />
 
         <FrameLayout
-            android:id="@+id/fragment_genero"
+            android:id="@+id/fragment_videojuego"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"

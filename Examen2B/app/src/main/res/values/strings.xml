@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Examen2B</string>
+    <string-array name="fps_opciones">
+        <item>16</item>
+        <item>32</item>
+        <item>116</item>
+    </string-array>
+    <string-array name="rating_options">
+        <item>Everyone</item>
+        <item>Teens</item>
+        <item>Mature</item>
+        <item>Adults</item>
+    </string-array>
 </resources>

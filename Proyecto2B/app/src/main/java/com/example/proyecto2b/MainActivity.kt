@@ -1,4 +1,4 @@
-package com.adrianaenriquez.examen2b
+package com.example.proyecto2b
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

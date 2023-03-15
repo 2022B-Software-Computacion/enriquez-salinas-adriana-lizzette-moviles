@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adapter.GeneroAdapter">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/generoNameTextView"
+            android:layout_width="320dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Nombre del Genero"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints,TextSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/genero_options"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Mostrar acciones disponibles"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dots"
+            tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

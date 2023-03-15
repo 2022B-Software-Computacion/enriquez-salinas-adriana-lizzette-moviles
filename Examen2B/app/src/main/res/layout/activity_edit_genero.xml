@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.EditGeneroActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/editGeneroTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Editar Genero"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingStart="0dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="28dp"
+            android:gravity="center_vertical|start"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Editar nombre de Genero"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editTxt_genero_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="nuevo nombre de genero"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:inputType="text"
+            tools:ignore="VisualLintTextFieldSize"
+            android:autofillHints="" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Editar Subgenero"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+        <EditText
+            android:id="@+id/editTxt_subgenero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="nuevo subgenero"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:autofillHints=""
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Editar fps"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_select_fps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:accessibilityLiveRegion="polite"
+            android:importantForAccessibility="yes"
+            android:labelFor="@id/spinner_select_fps"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:prompt="Seleccionar los fps"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/checkbox_camara_libre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Tiene Cámara Libre?"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_guardar_genero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:background="@color/purple_500"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Crear nuevo Genero"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="VisualLintButtonSize" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
