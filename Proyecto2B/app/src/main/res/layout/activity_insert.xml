@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Inserte Nuevo Videojuego"/>
+
+        <EditText
+            android:id="@+id/videojuego_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del videojuego"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/anio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Año de salida"
+            android:inputType="number"
+            android:minHeight="48dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Genero del Videojuego"/>
+
+        <EditText
+            android:id="@+id/genero_videojuego"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Genero del videojuego"
+            android:inputType="number"
+            android:minHeight="48dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Casa desarrolladora"/>
+        <EditText
+            android:id="@+id/casa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese la casa desarrolladora"
+            android:inputType="text"
+            android:minHeight="48dp" />
+        <include layout="@layout/component_button_insert_conf"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
