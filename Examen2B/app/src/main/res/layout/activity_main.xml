@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lista de marcas"
+            android:text="Lista de generos"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"/>
